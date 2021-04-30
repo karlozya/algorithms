@@ -36,6 +36,10 @@ fun main(){
 
     println(tournamentWinner(l, results))
 }
+
+/**
+ * O(n) time | O(k) space - where n is the number of competitions and k is the number of teams
+ */
 fun tournamentWinner(competitions: List<List<String>>, results: List<Int>): String {
     val languages = mutableMapOf<String, Int>()
     for((index, i) in competitions.withIndex()){
@@ -51,7 +55,6 @@ fun tournamentWinner(competitions: List<List<String>>, results: List<Int>): Stri
             lan.setLength(0)
             lan.append(j.key)
         }
-
     }
     return lan.toString()
 }
