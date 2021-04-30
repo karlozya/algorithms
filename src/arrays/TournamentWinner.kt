@@ -25,11 +25,42 @@
 package arrays
 
 fun main(){
-    println()
+    val l = mutableListOf<List<String>>()
+    l.add(listOf("HTML", "C#"))
+    l.add(listOf("C#", "PYTHON"))
+    l.add(listOf("PYTHON", "HTML"))
+
+    val results = listOf(0, 0, 1)
+
+    println(tournamentWinner(l, results))
 }
+fun tournamentWinner(competitions: List<List<String>>, results: List<Int>): String {
+    val languages = mutableMapOf<String, Int>()
+    for((index, i) in competitions.withIndex()){
+        if(results.get(index) == 1){
+            if(languages.containsKey(i.get(0))){
+                var count = languages.get(i.get(0)) ?: 0
+                languages.put(i.get(0), count + 1)
+            }else{
+                languages.put(i.get(0), 1)
+            }
+        }else{
+            if(languages.containsKey(i.get(1))){
+                var count = languages.get(i.get(1)) ?: 0
+                languages.put(i.get(1), count + 1)
+            }else{
+                languages.put(i.get(1), 1)
+            }
+        }
+    }
+    var greater = 0
+    var lan = ""
+    for(j in languages){
+        if(j.value > greater){
+            greater = j.value
+            lan = j.key
+        }
 
-fun tournamentWinner(competitions: List<List<String>>, results: List<Int>): String{
-
-
-    return ""
+    }
+    return lan
 }
