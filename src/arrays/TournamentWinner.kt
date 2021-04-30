@@ -24,6 +24,8 @@
 
 package arrays
 
+import java.lang.StringBuilder
+
 fun main(){
     val l = mutableListOf<List<String>>()
     l.add(listOf("HTML", "C#"))
@@ -42,13 +44,13 @@ fun tournamentWinner(competitions: List<List<String>>, results: List<Int>): Stri
         languages.put(i.get(point), count + 1)
     }
     var greater = 0
-    var lan = ""
+    var lan = StringBuilder()
     for(j in languages){
         if(j.value > greater){
             greater = j.value
-            lan = j.key
+            lan.append(j.key)
         }
 
     }
-    return lan
+    return lan.toString()
 }
