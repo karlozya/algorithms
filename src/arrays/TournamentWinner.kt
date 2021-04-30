@@ -37,21 +37,9 @@ fun main(){
 fun tournamentWinner(competitions: List<List<String>>, results: List<Int>): String {
     val languages = mutableMapOf<String, Int>()
     for((index, i) in competitions.withIndex()){
-        if(results.get(index) == 1){
-            if(languages.containsKey(i.get(0))){
-                var count = languages.get(i.get(0)) ?: 0
-                languages.put(i.get(0), count + 1)
-            }else{
-                languages.put(i.get(0), 1)
-            }
-        }else{
-            if(languages.containsKey(i.get(1))){
-                var count = languages.get(i.get(1)) ?: 0
-                languages.put(i.get(1), count + 1)
-            }else{
-                languages.put(i.get(1), 1)
-            }
-        }
+        val point = if (results.get(index) == 1) 0 else 1
+        val count = languages.get(i.get(point)) ?: 0
+        languages.put(i.get(point), count + 1)
     }
     var greater = 0
     var lan = ""
