@@ -48,6 +48,7 @@ fun tournamentWinner(competitions: List<List<String>>, results: List<Int>): Stri
     for(j in languages){
         if(j.value > greater){
             greater = j.value
+            lan.setLength(0)
             lan.append(j.key)
         }
 
