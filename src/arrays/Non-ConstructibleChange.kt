@@ -21,7 +21,9 @@ fun main(){
     println(nonConstructibleChange(input))
 }
 
-
+/**
+ * O(n log n) time | O(1) space
+ */
 fun nonConstructibleChange(coins: MutableList<Int>): Int {
     coins.sort()
 
