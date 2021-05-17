@@ -14,7 +14,7 @@
  *      55
  */
 
-package arrays
+package easy.arrays
 
 fun main(){
     val input = mutableListOf(1, 5, 1, 1, 1, 10, 15, 20, 100)

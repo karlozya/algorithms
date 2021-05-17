@@ -10,7 +10,7 @@
  *      [1, 4, 9, 25, 36, 64, 81]
  */
 
-package arrays
+package easy.arrays
 
 import kotlin.math.abs
 

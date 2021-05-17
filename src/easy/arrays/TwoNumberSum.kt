@@ -11,7 +11,7 @@
  *      [-1, 11]
  */
 
-package arrays
+package easy.arrays
 
 fun main(){
     val inp = listOf(3,5,-4,8,11,1,-1,6)

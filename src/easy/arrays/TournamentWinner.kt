@@ -22,7 +22,7 @@
  *
  */
 
-package arrays
+package easy.arrays
 
 import java.lang.StringBuilder
 
