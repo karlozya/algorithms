@@ -44,6 +44,9 @@ open class BST(value: Int) {
     var right: BST? = null
 }
 
+/**
+ * O(log(n)) time | O(1) space - where n is the number of nodes in the BST
+ */
 fun findClosestValueInBst(tree: BST, target: Int, closest: Int? = 1): Int {
 
     var dif = tree.value - target
